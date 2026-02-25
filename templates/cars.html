@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Легковые автомобили — Turbo DV{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Легковые автомобили</h1>
+        <p>Новые и подержанные легковые автомобили от ведущих мировых производителей</p>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-custom mt-4">На главную</a>
+    </div>
+</section>
+
+<!-- Cars Section -->
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Каталог легковых автомобилей</h2>
+            <p>Широкий выбор моделей по выгодным ценам</p>
+        </div>
+        
+        <div class="row">
+            <!-- Honda Fit -->
+            <div class="col-md-4">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="{{ url_for('static', filename='images/cars/used/honda_fit_/honda_fit_1.jpg') }}" alt="Honda Fit">
+                        <div class="vehicle-badge">С пробегом</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Honda Fit</h3>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-calendar"></i> авг 2021</span>
+                            <span><i class="bi bi-speedometer"></i> 20 000 км</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-lightning"></i> 1.5, 130 л.с.</span>
+                        </div>
+                        <div class="vehicle-price">1 232 430 ₽</div>
+                        <a href="{{ url_for('car_honda_fit') }}" class="btn btn-details">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Audi Q7 -->
+            <div class="col-md-4">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="{{ url_for('static', filename='images/cars/new/Audi_Q7_55TFSI_QUATRO_/Audi_Q7_55TFSI_QUATRO1.jpg') }}" alt="Audi Q7">
+                        <div class="vehicle-badge">Новый</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Audi Q7 55 TFSI Quattro</h3>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-calendar"></i> 2025 г.</span>
+                            <span><i class="bi bi-speedometer"></i> Новый</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-lightning"></i> 3.0, 340 л.с.</span>
+                        </div>
+                        <div class="vehicle-price">12 950 000 ₽</div>
+                        <a href="{{ url_for('car_audi_q7') }}" class="btn btn-details">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

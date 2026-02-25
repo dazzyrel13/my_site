@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Автовышки — Turbo DV{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Автовышки</h1>
+        <p>Специальная техника для работы на высоте</p>
+        <a href="{{ url_for('special') }}" class="btn btn-outline-custom mt-4">Вся спецтехника</a>
+    </div>
+</section>
+
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Каталог автовышек</h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 text-center py-5">
+                <p class="text-muted mb-0">Скоро здесь появятся новые предложения. Свяжитесь с нами для уточнения ассортимента.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary-custom mt-3">Связаться с нами</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

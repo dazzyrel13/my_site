@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты — Turbo DV{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Контакты</h1>
+        <p>Свяжитесь с нами для получения консультации</p>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-custom mt-4">На главную</a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Наши контакты</h2>
+            <p>Мы всегда готовы помочь вам с выбором техники</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Адрес</h4>
+                            <p style="color: #64748b;">г. Благовещенск, ул. Ленина, 106</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Телефон</h4>
+                            <p style="color: #64748b;"><a href="tel:+79991660146" style="color: #64748b; text-decoration: none; font-size: 1.4rem; font-weight: 600;">8 (999) 166-01-46</a></p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Email</h4>
+                            <p style="color: #64748b;"><a href="mailto:info@turbodv.ru" style="color: #64748b; text-decoration: none;">info@turbodv.ru</a></p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Режим работы</h4>
+                            <p style="color: #64748b; margin-bottom: 5px;">Пн-Пт: 09:00 - 19:00</p>
+                            <p style="color: #64748b; margin-bottom: 5px;">Сб: 10:00 - 17:00</p>
+                            <p style="color: #64748b;">Вс: Выходной</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <form style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Ваше имя *" required style="border-radius: 10px; padding: 15px; border: 1px solid #e2e8f0;">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="Телефон *" required style="border-radius: 10px; padding: 15px; border: 1px solid #e2e8f0;">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email" style="border-radius: 10px; padding: 15px; border: 1px solid #e2e8f0;">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" placeholder="Сообщение *" required style="border-radius: 10px; padding: 15px; border: 1px solid #e2e8f0; min-height: 150px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary-custom" style="width: 100%;">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

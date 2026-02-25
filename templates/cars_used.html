@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Легковые с пробегом — Turbo DV{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Легковые автомобили с пробегом</h1>
+        <p>Проверенные автомобили по выгодным ценам</p>
+        <a href="{{ url_for('cars') }}" class="btn btn-outline-custom mt-4">Все легковые</a>
+    </div>
+</section>
+
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Автомобили с пробегом</h2>
+        </div>
+        
+        <div class="row">
+            <!-- Honda Fit -->
+            <div class="col-md-4 offset-md-4">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="{{ url_for('static', filename='images/cars/used/honda_fit_/honda_fit_1.jpg') }}" alt="Honda Fit">
+                        <div class="vehicle-badge">С пробегом</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Honda Fit</h3>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-calendar"></i> авг 2021</span>
+                            <span><i class="bi bi-speedometer"></i> 20 000 км</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-lightning"></i> 1.5, 130 л.с.</span>
+                        </div>
+                        <div class="vehicle-price">1 232 430 ₽</div>
+                        <a href="{{ url_for('car_honda_fit') }}" class="btn btn-details">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Самосвалы — Turbo DV{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Самосвалы</h1>
+        <p>Надёжные самосвалы для строительства и перевозок сыпучих грузов</p>
+        <a href="{{ url_for('trucks') }}" class="btn btn-outline-custom mt-4">Все грузовые</a>
+    </div>
+</section>
+
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Каталог самосвалов</h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 text-center py-5">
+                <p class="text-muted mb-0">Скоро здесь появятся новые предложения. Свяжитесь с нами для уточнения ассортимента.</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary-custom mt-3">Связаться с нами</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

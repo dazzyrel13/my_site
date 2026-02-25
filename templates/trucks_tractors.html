@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Тягачи — Turbo DV{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Тягачи</h1>
+        <p>Надежные тягачи для перевозки тяжелых грузов</p>
+        <a href="{{ url_for('trucks') }}" class="btn btn-outline-custom mt-4">Все грузовые</a>
+    </div>
+</section>
+
+<!-- Trucks Section -->
+<section class="vehicles-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Тягачи</h2>
+        </div>
+        
+        <div class="row">
+            <!-- Foton Galaxy -->
+            <div class="col-md-4 offset-md-4">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="{{ url_for('static', filename='images/trucks_tractors/Foton_Galaxy_6x4/foton_galaxy_6_4_1.jpg') }}" alt="Foton Galaxy">
+                        <div class="vehicle-badge">Новый</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Foton Galaxy 6x4</h3>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-calendar"></i> 2025 г.</span>
+                            <span><i class="bi bi-speedometer"></i> Новый</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-lightning"></i> 13.0L, 450 л.с.</span>
+                        </div>
+                        <div class="vehicle-price">15 950 000 ₽</div>
+                        <a href="{{ url_for('car_foton_galaxy') }}" class="btn btn-details">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
