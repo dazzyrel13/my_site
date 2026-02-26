@@ -456,7 +456,7 @@
                     
                     <!-- Грузовые с дропдауном -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if active_page.startswith('trucks') %}active{% endif %}" href="#" id="trucksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {% if active_page == 'trucks' or active_page.startswith('trucks_') %}active{% endif %}" href="#" id="trucksDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Грузовые
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="trucksDropdown">
@@ -473,7 +473,7 @@
                     
                     <!-- Спецтехника с дропдауном -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if active_page.startswith('special') %}active{% endif %}" href="#" id="specialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {% if active_page == 'special' or active_page.startswith('special_') %}active{% endif %}" href="#" id="specialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Спецтехника
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="specialDropdown">
