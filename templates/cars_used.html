@@ -19,7 +19,7 @@
         
         <div class="row">
             <!-- Honda Fit -->
-            <div class="col-md-4 offset-md-4">
+            <div class="col-md-4">
                 <div class="vehicle-card">
                     <div class="vehicle-image">
                         <img src="{{ url_for('static', filename='images/cars/used/honda_fit_/honda_fit_1.jpg') }}" alt="Honda Fit">
@@ -36,6 +36,28 @@
                         </div>
                         <div class="vehicle-price">1 232 430 ₽</div>
                         <a href="{{ url_for('car_honda_fit') }}" class="btn btn-details">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mazda MX-5 -->
+            <div class="col-md-4">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="{{ url_for('static', filename='images/cars/used/mazda_mx5_/mazda_mx5_1.jpg') }}" alt="Mazda MX-5">
+                        <div class="vehicle-badge">С пробегом</div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Mazda MX-5 2.0 MT</h3>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-calendar"></i> 2022</span>
+                            <span><i class="bi bi-speedometer"></i> 10 206 км</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <span><i class="bi bi-lightning"></i> 2.0, 184 л.с.</span>
+                        </div>
+                        <div class="vehicle-price">3 300 000 ₽</div>
+                        <a href="{{ url_for('car_mazda_mx5') }}" class="btn btn-details">Подробнее</a>
                     </div>
                 </div>
             </div>

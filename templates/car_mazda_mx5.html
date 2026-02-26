@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+{% block title %}Mazda MX-5 2.0 MT — Turbo DV{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Mazda MX-5 2.0 MT</h1>
+        <p>Легендарный родстер с механической коробкой передач</p>
+        <a href="{{ url_for('cars_used') }}" class="btn btn-outline-custom mt-4">Назад к списку</a>
+    </div>
+</section>
+
+<!-- Car Details Section -->
+<section class="vehicles-section">
+    <div class="container">
+        <div class="row">
+            <!-- Карточка с фото и основной информацией -->
+            <div class="col-md-8">
+                <!-- Карусель с 5 фото -->
+                <div id="mazdaMX5Carousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ url_for('static', filename='images/cars/used/mazda_mx5_/mazda_mx5_1.jpg') }}" 
+                                 class="d-block w-100" 
+                                 alt="Mazda MX-5 вид спереди" 
+                                 style="height: 400px; object-fit: cover; border-radius: 15px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/cars/used/mazda_mx5_/mazda_mx5_2.jpg') }}" 
+                                 class="d-block w-100" 
+                                 alt="Mazda MX-5 салон" 
+                                 style="height: 400px; object-fit: cover; border-radius: 15px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/cars/used/mazda_mx5_/mazda_mx5_3.jpg') }}" 
+                                 class="d-block w-100" 
+                                 alt="Mazda MX-5 вид сбоку" 
+                                 style="height: 400px; object-fit: cover; border-radius: 15px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/cars/used/mazda_mx5_/mazda_mx5_4.jpg') }}" 
+                                 class="d-block w-100" 
+                                 alt="Mazda MX-5 багажник" 
+                                 style="height: 400px; object-fit: cover; border-radius: 15px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='images/cars/used/mazda_mx5_/mazda_mx5_5.jpg') }}" 
+                                 class="d-block w-100" 
+                                 alt="Mazda MX-5 вид сзади" 
+                                 style="height: 400px; object-fit: cover; border-radius: 15px;">
+                        </div>
+                    </div>
+                    <!-- Кнопки навигации -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Следующий</span>
+                    </button>
+                    <!-- Индикаторы -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                        <button type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                        <button type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+                        <button type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide-to="3" aria-label="Слайд 4"></button>
+                        <button type="button" data-bs-target="#mazdaMX5Carousel" data-bs-slide-to="4" aria-label="Слайд 5"></button>
+                    </div>
+                </div>
+
+                <!-- Основная информация -->
+                <div class="bg-white p-4 rounded shadow mb-4">
+                    <h2 class="mb-3">Основная информация</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-calendar me-2"></i>Год выпуска:</strong><br>
+                            2022
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-speedometer me-2"></i>Пробег:</strong><br>
+                            10 206 км
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-lightning me-2"></i>Двигатель:</strong><br>
+                            2.0, 184 л.с.
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-gear me-2"></i>Коробка передач:</strong><br>
+                            Механика
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-palette me-2"></i>Цвет:</strong><br>
+                            Белый
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-check-circle me-2"></i>Состояние:</strong><br>
+                            Не битый
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-file-earmark-text me-2"></i>ПТС:</strong><br>
+                            Не оформлен
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-truck me-2"></i>Привод:</strong><br>
+                            Задний
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong><i class="bi bi-cast me-2"></i>Руль:</strong><br>
+                            Левый
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-4 rounded shadow mb-4">
+                    <h2 class="mb-3">Описание</h2>
+                    <p class="lead">Легендарный родстер Mazda MX-5 с механической коробкой передач — идеальный выбор для любителей динамичной езды.</p>
+                    <p>Mazda MX-5 2.0 MT — это компактный, легкий и невероятно управляемый автомобиль, сочетающий в себе классический дизайн и современные технологии. Благодаря заднему приводу и механической коробке передач, водитель получает полный контроль над автомобилем и истинное удовольствие от вождения.</p>
+                    <p>Открытый верх и двухместный салон создают неповторимую атмосферу свободы и приключений. Идеально подходит для поездок по городу и за его пределами.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded shadow mb-4">
+                    <h2 class="mb-3">Расшифровка стоимости</h2>
+                    <div class="alert alert-info mb-3">
+                        <strong>Стоимость: 3 300 000 ₽</strong>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-currency-exchange me-2"></i>Итого:</span>
+                            <strong>3 300 000 ₽</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- БЛОК С ЛИЗИНГОМ -->
+                <div class="bg-white p-4 rounded shadow mb-4">
+                    <h2 class="mb-3">Условия лизинга</h2>
+                    <div class="alert alert-success mb-3">
+                        <i class="bi bi-coin me-2"></i>Подберём лучшие условия лизинга под ваш запрос
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar me-2"></i>Срок лизинга</span>
+                            <span>12-48 месяцев</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-currency-exchange me-2"></i>Первый взнос</span>
+                            <span>от 15%</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-credit-card me-2"></i>Ставка</span>
+                            <span>от 5.9%</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-person-check me-2"></i>Кредитная история</span>
+                            <span>Не требуется</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Боковая панель -->
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded shadow sticky-top" style="top: 100px;">
+                    <div class="text-center mb-4">
+                        <h2 class="text-primary mb-2 vehicle-price">3 300 000 ₽</h2>
+                        <p class="text-muted">В наличии в Благовещенске!</p>
+                        <div class="mt-3" style="display: inline-block; background: var(--accent-orange); color: white; padding: 8px 20px; border-radius: 20px; font-weight: 600; font-size: 1.1rem;">
+                            С пробегом
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="mb-3">
+                        <strong><i class="bi bi-calendar me-2"></i>Год:</strong> 2022
+                    </div>
+                    <div class="mb-3">
+                        <strong><i class="bi bi-speedometer me-2"></i>Пробег:</strong> 10 206 км
+                    </div>
+                    <div class="mb-4">
+                        <strong><i class="bi bi-lightning me-2"></i>Двигатель:</strong> 2.0, 184 л.с.
+                    </div>
+
+                    <button class="btn btn-primary-custom w-100 mb-3" onclick="alert('Менеджер свяжется с вами для оформления заказа!')">
+                        <i class="bi bi-telephone me-2"></i>Заказать звонок
+                    </button>
+
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary w-100">
+                        <i class="bi bi-chat-square-text me-2"></i>Написать в чат
+                    </a>
+
+                    <hr class="my-4">
+
+                    <div class="small text-muted">
+                        <p><i class="bi bi-check-circle me-2"></i>Гарантия 3 года</p>
+                        <p><i class="bi bi-check-circle me-2"></i>Полный пакет документов</p>
+                        <p><i class="bi bi-check-circle me-2"></i>Бесплатная доставка по ДВ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="vehicles-section" style="background: white;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Готовы оформить покупку?</h2>
+            <p>Свяжитесь с нами для получения консультации и оформления заказа</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Адрес</h4>
+                            <p style="color: #64748b;">г. Благовещенск, ул. Ленина, 106</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Телефон</h4>
+                            <p style="color: #64748b;"><a href="tel:+79991660146" style="color: #64748b; text-decoration: none; font-size: 1.4rem; font-weight: 600;">8 (999) 166-01-46</a></p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0; color: white; font-size: 1.3rem;">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-blue); font-size: 1.3rem; font-weight: 600; margin-bottom: 5px;">Email</h4>
+                            <p style="color: #64748b;"><a href="mailto:info@turbodv.ru" style="color: #64748b; text-decoration: none;">info@turbodv.ru</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <form style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+                    <input type="hidden" name="car" value="Mazda MX-5 2.0 MT">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Ваше имя *" required style="border-radius:10px; padding:15px; border:1px solid #e2e8f0;">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="Телефон *" required style="border-radius:10px; padding:15px; border:1px solid #e2e8f0;">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email" style="border-radius:10px; padding:15px; border:1px solid #e2e8f0;">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" placeholder="Сообщение *" required style="border-radius:10px; padding:15px; border:1px solid #e2e8f0; min-height:150px; resize:vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary-custom" style="width: 100%;">
+                        <i class="bi bi-send me-2"></i>Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

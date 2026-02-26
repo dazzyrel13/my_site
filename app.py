@@ -29,6 +29,10 @@ def car_honda_fit():
 def car_audi_q7():
     return render_template('car_audi_q7.html', active_page='car_audi_q7')
 
+@app.route('/car/mazda-mx5')
+def car_mazda_mx5():
+    return render_template('car_mazda_mx5.html', active_page='car_mazda_mx5')
+
 # Тягачи
 @app.route('/car/foton-galaxy')
 def car_foton_galaxy():
