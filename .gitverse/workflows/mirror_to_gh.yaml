@@ -22,7 +22,8 @@ jobs:
     - name: Mirror to GitHub
       env:
         GITHUB_TOKEN: ${{ secrets.GH_MIRROR_TOKEN }}
-        GITHUB_REPO: https://github.com/${{ secrets.GH_MIRROR_ACTOR }}/${{ secrets.GH_MIRROR_REPO }}
+        GITHUB_ACTOR: ${{ secrets.GH_MIRROR_ACTOR }}
+        GITHUB_REPO: ${{ secrets.GH_MIRROR_REPO }}
       run: |
         git config --global user.name "GitVerse Mirror"
         git config --global user.email "mirror@gitverse.local"
@@ -30,8 +31,11 @@ jobs:
         # Удаляем старый remote если есть
         git remote remove github 2>/dev/null || true
         
+        # Создаем URL с токеном
+        REPO_URL="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_ACTOR}/${GITHUB_REPO}.git"
+        
         # Добавляем GitHub как remote
-        git remote add github $GITHUB_REPO
+        git remote add github "$REPO_URL"
         
         # Отправляем все ветки и теги
         git push --force github --all
