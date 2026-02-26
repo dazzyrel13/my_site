@@ -33,6 +33,10 @@ def car_audi_q7():
 def car_mazda_mx5():
     return render_template('car_mazda_mx5.html', active_page='car_mazda_mx5')
 
+@app.route('/car/hyundai-elantra')
+def car_hyundai_elantra():
+    return render_template('car_hyundai_elantra.html', active_page='car_hyundai_elantra')
+
 # Тягачи
 @app.route('/car/foton-galaxy')
 def car_foton_galaxy():
